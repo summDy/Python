@@ -1,5 +1,14 @@
 import tkinter as tk
 
+class Student:
+    def __init__(self,name,scroe):
+        self.name =name
+        self.scroe=scroe
+        # def print_scroe(self):
+        # 如果def跟self.scroe=scroe并行会报错
+    def print_scroe(self):
+        print("huiweiyong")
+
 class Application(tk.Frame):
     def __init__(self, master=None):
         super().__init__(master)
