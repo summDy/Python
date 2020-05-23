@@ -1,13 +1,18 @@
+# coding :utf-8
+
 import tkinter as tk
 
+
 class Student:
-    def __init__(self,name,scroe):
-        self.name =name
-        self.scroe=scroe
+    def __init__(self, name, scroe):
+        self.name = name
+        self.scroe = scroe
         # def print_scroe(self):
         # 如果def跟self.scroe=scroe并行会报错
+
     def print_scroe(self):
         print("huiweiyong")
+
 
 class Application(tk.Frame):
     def __init__(self, master=None):
@@ -22,13 +27,19 @@ class Application(tk.Frame):
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
 
-        self.quit = tk.Button(self, text="QUIT", fg="red",
+        self.quit = tk.Button(self,
+                              text="QUIT",
+                              fg="red",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
 
     def say_hi(self):
         print("hi there, everyone!")
 
+
 root = tk.Tk()
+root.title('Super development tools')  # 主窗口标题
+root.geometry("500x100")
 app = Application(master=root)
-app.mainloop()
+
+app.mainloop()  # show thee windows
